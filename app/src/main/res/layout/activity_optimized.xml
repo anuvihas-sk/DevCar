@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Use RelativeLayout inside ScrollView -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_optimized_layout">
+
+        <!-- Battery Calibration Tips -->
+        <TextView
+            android:id="@+id/battery_calibration_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Battery Calibration Tips:\n\n1. Fully charge your phone to 100%.\n2. Use the phone until it powers off by itself due to low battery.\n3. Charge the phone back to 100% without interruption.\n4. Avoid charging the phone overnight frequently.\n5. Try not to let the battery drop below 20% too often.( Additional optimization -> turn off which is unnecessary )"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="start"
+            android:padding="16dp"
+            android:layout_marginTop="25dp"
+            android:lineSpacingExtra="6dp"/>
+
+        <!-- Screen Brightness Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/brightness_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/battery_calibration_tips"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+            <TextView
+                android:id="@+id/screen_brightness_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brightness: Default"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-medium"
+                android:padding="12dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Screen Timeout Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timeout_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/brightness_card"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+            <TextView
+                android:id="@+id/screen_timeout_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screen Timeout: Default"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-medium"
+                android:padding="12dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Wi-Fi Button -->
+        <Button
+            android:id="@+id/wifi_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wi-Fi"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/timeout_card"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="12dp"
+            android:background="@color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Bluetooth Button -->
+        <Button
+            android:id="@+id/bluetooth_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/wifi_button"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="12dp"
+            android:background="@color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- GPS Button -->
+        <Button
+            android:id="@+id/gps_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPS"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bluetooth_button"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="12dp"
+            android:background="@color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Dark Mode Button -->
+        <Button
+            android:id="@+id/darkmode_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/gps_button"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="12dp"
+            android:background="@color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Proceed Button -->
+        <Button
+            android:id="@+id/proceed_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/darkmode_button"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"/>
+
+        <!-- Lottie Animation for Optimization -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/optimizationAnimationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_fileName="boost.json"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="false"
+            android:visibility="gone" />
+
+        <!-- Optimization Message TextView -->
+        <TextView
+            android:id="@+id/optimizationMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Battery has been optimized"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+    </RelativeLayout>
+</ScrollView>

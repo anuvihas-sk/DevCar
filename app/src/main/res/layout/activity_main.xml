@@ -1,0 +1,222 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+    <GridLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Battery Health Logo"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Health"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/health_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Charging Status Logo"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Charging Status"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/charging_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Charging"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/battery_level_card"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Battery Level Logo"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Level"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/battery_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56%"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Battery Technology Logo"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Type"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/battery_technology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lithium-Ion"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round"
+            android:elevation="4dp"
+            android:layout_margin="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25°C"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="245dp"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="-88dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Voltage"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5000 mV"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/round_bt"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_columnSpan="2"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/optimize_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Optimize"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/round"
+                android:layout_margin="8dp"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+
+
+
+    </GridLayout>
+</ScrollView>
